@@ -1,0 +1,10 @@
+*.ipynb text eol=lf
+*.py text eol=lf
+*.csv -text
+*.pdf -text
+*.txt -text
+*.ipynb !text !filter !merge !diff
+*.csv !text !filter !merge !diff
+*.pdf !text !filter !merge !diff
+*txt !text !filter !merge !diff
+*py !text !filter !merge !diff
