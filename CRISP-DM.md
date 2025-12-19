@@ -114,6 +114,9 @@ The previously mentioned evaluation process for each of the four models involved
 Each model was accompanied by an Excel table containing the metric values for every cycle.
 The evaluation process was further enhanced with a confusion matrix.
 
+
+
+
 Logistic Regression results:
 1. Accuracy ranged from 46% to 50%, indicating that the model correctly classified about half of the cases.
 2. Precision remained relatively stable at approximately 45%.
@@ -135,4 +138,28 @@ Random Forest results:
 Random Forest clearly outperformed all other tested machine learning models.
 Its success in solving the classification problem is likely due to its structure. By hierarchically dividing the multidimensional feature space into smaller decision trees, the model can capture nonlinear and complex feature interactions.
 
+Neural Network results:
+Accuracy remained relatively stable, with the exception of the fourth cycle, when changing the optimizer caused it to drop to around 36%.
+Other metrics also declined noticeably after switching from the Adam optimizer to SGD.
+Overall, the multilayer perceptron (MLP) neural network developed for this project showed performance comparable to Logistic Regression and SVM, despite having  significantly more complex internal architecture and operational characteristics.
 
+---
+
+# Deployment 
+
+The analytical model developed in this project, based on the CRISP-DM methodology, is of a prototype nature and is not yet suitable for full deployment.
+It requires a number of further actions, primarily related to:
+1. Modifying its structure, including increasing the number of numerical and categorical attributes. This would allow the model to take into account a larger set of factors determining its attractiveness for potential capital investments.
+2. Expanding the dataset by including more companies, which would enhance the system’s applicability to international financial markets.
+3. Functionally, it would be valuable to explore additional machine learning algorithms for classification tasks. These could include bagging-based ensemble classifiers, such as Random Forest, which performed best with the current project structure.
+4. Within ensemble methods, boosting algorithms—including adaptive boosting (AdaBoost) and gradient boosting (XGBoost) - are also worth testing. This recommendation applies to the current dataset.
+4. With an increase in model structural complexity, deep learning approaches, such as the previously applied perceptron neural network, might achieve even greater effectiveness.
+
+The project aimed to create a classification system that automatically evaluates a company’s investment attractiveness. This objective was largely met.
+The evaluation method involved first grouping companies based on the temporal aspect of their financial statements and then by sector membership. Deterministic class assignment was based on a fundamental statistical measure of central tendency—the median of the relevant financial indicators.
+Currently, the Random Forest algorithm demonstrates the highest performance, pointing the way for further development and optimization of the analytical model.
+
+
+
+Analysis of the confusion matrix suggests that the model is currently moderately stable and suitable for preliminary classification. Nevertheless, its ability to accurately predict companies with medium investment attractiveness is limited, indicating a preference for the extreme classes (high and low investment ratings).
+For further development of the Random Forest model, the key areas for optimization include hyperparameter tuning, feature engineering, and rebalancing of class distributions.
