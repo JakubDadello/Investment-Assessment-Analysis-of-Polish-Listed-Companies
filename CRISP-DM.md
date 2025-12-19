@@ -1,5 +1,5 @@
 # Description of the project
-The analysis of a company's financial data, taking into account the characteristics of its sector, is among the key factors considered in investment-related decision-making processes. The analytical project presented in this presentation focuses on collecting selected, critical, and structured financial and non-financial data concerning Polish publicly listed companies. Subsequently, a comprehensive process of data exploration and visualization was carried out.
+The analysis of a company's financial data, taking into account the characteristics of its sector, is among the key factors considered in investment-related decision-making processes. The analytical project presented in this document focuses on collecting selected, critical, and structured financial and non-financial data concerning Polish publicly listed companies. Subsequently, a comprehensive process of data exploration and visualization was carried out.
 
 ---
 
@@ -62,8 +62,77 @@ The non-financial data collected for the purposes of this project are categorica
 12. technology and engineering;
 13. transport and motorization.
 
+Each analyzed company was assigned to one of the aforementioned sectors. The main criterion for selection was the company’s business profile, primarily including its product structure and raw material–capital base. For companies with a highly diversified range of products or services, categorization was based on the dominant product portfolio. The official Warsaw Stock Exchange (WSE) website served as the source of data regarding each company’s sector affiliation.
 
+more information about dataset in `data/README.md`
 
+---
 
+# Data Preparation 
+
+Data Preparation Steps Conducted in the Project:
+1. Exporting the Excel file containing the preprocessed data.
+2. Separating the label column (investment rating) from the rest of the data.
+3. Splitting the comprehensive dataset into numerical and categorical data.
+4. Creating a numerical transformer in the form of a sequential processing pipeline, used for preprocessing numerical data, including imputing missing values and normalizing random variables through standardization.
+5. Creating a categorical transformer, also in the form of a Pipeline, intended for preprocessing categorical data, including imputation and conversion of categorical variables into numerical format using OneHotEncoding.
+6. Creating a combined object that incorporates both the numerical and categorical transformers.
+
+The entire data preparation process was implemented in the file preprocessing.py.
+
+---
+
+# Modeling
+The objective of this project was to create a classification model that assigns an investment rating to each company, reflecting its financial condition and taking into account its sector affiliation.
+
+To achieve this goal, four popular classification models based on machine learning algorithms were used:
+1. Logistic Regression
+2. Support Vector Machine (SVM), specifically the classification variant (SVC)
+3. Random Forest, applied to classification problems
+4. Artificial Neural Network (ANN), precisely a multilayer perceptron classification model (MLP Classifier)
+
+The source code for each model is contained in a separate file within the notebooks folder.
+
+For building the Logistic Regression, SVM, and Random Forest models, the corresponding tools from the Python library scikit-learn were used. In contrast, the neural network was created using functions from the TensorFlow library, implemented via the specialized deep learning interface Keras.
+The training process involved estimating the model parameters (weights) with the goal of minimizing the loss function. Each model was trained six times. After each training cycle, predictions were generated, based on which three evaluation metrics were calculated: accuracy, precision, and recall, along with the confusion matrix.
+
+Each new training cycle of the model was preceded by adjustments to its hyperparameters for optimization.
+1. For Logistic Regression, the C hyperparameter, which controls the strength of regularization, was modified, and an additional operation was implemented during the Data Preparation phase - dimensionality reduction using Principal Component Analysis (PCA).
+2. The SVM was optimized primarily with respect to the kernel function (linear, polynomial, Gaussian) and the gamma hyperparameter.
+3. In the case of the Random Forest, changes included the number of decision trees and the splitting criterion (Gini, entropy).
+4. For the perceptron-based neural network, the number of layers and neurons was optimized. During the last two cycles, the dropout technique was implemented to reduce the risk of overfitting.
+
+---
+
+# Evaluation 
+
+The previously mentioned evaluation process for each of the four models involved calculating model predictions after each of the six training cycles, and then deriving one of the three main evaluation metrics based on these predictions:
+1. Accuracy
+2. Precision
+3. Recall
+
+Each model was accompanied by an Excel table containing the metric values for every cycle.
+The evaluation process was further enhanced with a confusion matrix.
+
+Logistic Regression results:
+1. Accuracy ranged from 46% to 50%, indicating that the model correctly classified about half of the cases.
+2. Precision remained relatively stable at approximately 45%.
+3. Recall was within a narrow range of 43–46%.
+In the last (sixth) cycle, all metrics reached their highest values, yet none exceeded 50%.
+Overall, the Logistic Regression model did not achieve satisfactory performance, mainly due to the lack of linear separability between the features and the probabilistic logits.
+
+SVM results:
+1. Accuracy hovered around 43%, showing no significant fluctuations.
+2. Precision increased by almost 20 percentage points in the fifth cycle, reaching 57%, and then dropped to around 50% in the final trial.
+3. Recall remained within a narrow range, oscillating at approximately 40%.
+In general, the SVM model performed slightly worse than the previously tested Logistic Regression model in solving this business problem. It should be noted that, besides the linear variant (LinearSVC), nonlinear kernels (polynomial and Gaussian) were also tested.
+The limited effectiveness of SVM was likely due to features lacking proper scaling. Differences in magnitude—such as net profit in millions versus profitability ratios in percentages—significantly influenced the creation of the decision hyperplane and, consequently, the classification quality.
+
+Random Forest results:
+1. Accuracy ranged between 75% and 80%.
+2. Precision remained in a similar range, dropping below 75% only in the fifth cycle.
+3. Recall behaved similarly to precision throughout the testing process, with comparable values in each cycle.
+Random Forest clearly outperformed all other tested machine learning models.
+Its success in solving the classification problem is likely due to its structure. By hierarchically dividing the multidimensional feature space into smaller decision trees, the model can capture nonlinear and complex feature interactions.
 
 
