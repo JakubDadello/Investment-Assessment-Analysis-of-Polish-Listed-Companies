@@ -9,3 +9,5 @@ The goal is to build a robust classification model that accurately predicts each
 - `notebooks/` - preprocessing and modeling notebooks
 - `dashboards/` - Power BI dashboards
 - `CRISP-DM.md` - detailed methodology workflow
+
+For the full CRISP-DM methodology, see [CRISP-DM.md](CRISP-DM.md)
