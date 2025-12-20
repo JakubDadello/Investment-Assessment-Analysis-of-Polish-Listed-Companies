@@ -34,7 +34,7 @@ feature_importances_df = pd.DataFrame({
 
 # --- plot ---
 plt.figure(figsize=(10, 8))
-top_features = feature_importances_df.head(10)
+top_features = feature_importances_df.head(5)
 
 plt.barh(top_features["Feature"], top_features["Importance"])
 plt.gca().invert_yaxis()
