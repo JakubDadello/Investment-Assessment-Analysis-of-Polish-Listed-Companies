@@ -30,7 +30,6 @@ This folder contains all the datasets used in the project.
   - No missing labels
 - **Scripts:**
   - SQL script `initial_labeling_sql` used to generate `initial_labeling_data.csv`.
-    Demonstrates ability to work with relational databases and compute sector-based labels.
 
 ---
 
