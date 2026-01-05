@@ -22,7 +22,7 @@ y_test  = y_test.values.ravel()
 best_params = {
     "n_estimators": 200,
     "criterion": "entropy",
-    "max_depth": 10, 
+    "max_depth": None, 
     "random_state": 42
 }
 
