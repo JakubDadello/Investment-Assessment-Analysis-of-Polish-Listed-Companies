@@ -137,7 +137,7 @@ The model shows high reliability in distinguishing between 'low' and 'high' inve
 
 ![Feature_importance](/reports/feature_importance.png)
 
-The Random Forest model indicates that Net profit is the most fluential feature in predicting target. Both ROE and ROA contribute at similar, slightly lower level. EBITDA has moderate importance, while Net cash flow is the least significant among the features.
+The Random Forest model indicates that Net income is the most fluential feature in predicting target. Both ROE and ROA contribute at similar, slightly lower level. EBITDA has moderate importance, while Net cash flow is the least significant among the features.
 
 ---
 
