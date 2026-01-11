@@ -5,7 +5,8 @@ This project analyzes the financial data of 370 Polish listed companies (GPW), t
 The goal is to build a robust classification model that accurately predicts each company's investment level (low, medium, or high) based on key financial indicators.
 
 ## Repository Structure
-- `data/` - raw and labeled datasets (see `data/README.md`), and SQL scripts 
+- `data/` - raw and labeled datasets (see `data/README.md`)
+- `ETL/` - SQL scripts 
 - `notebooks/` - Jupyter notebooks for preprocessing and modeling experiments
 - `src/` - Python scripts for preprocessing data and training the final ML model
 - `reports/` – Power BI dashboards and related analytics outputs
