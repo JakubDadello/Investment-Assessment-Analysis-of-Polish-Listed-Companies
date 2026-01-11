@@ -4,6 +4,15 @@ This project analyzes the financial data of 370 Polish listed companies (GPW), t
 
 The goal is to build a robust classification model that accurately predicts each company's investment level (low, medium, or high) based on key financial indicators.
 
+## How to Run
+
+To run this project locally, you can use either Docker (recommended) or a standard Python environment.
+
+### Using Docker 
+* **Build the image:**
+  ```bash
+  docker build -t polish-equity-analytics .
+
 ## Repository Structure
 - `data/` - raw and labeled datasets (see `data/README.md`)
 - `ETL/` - SQL scripts 
