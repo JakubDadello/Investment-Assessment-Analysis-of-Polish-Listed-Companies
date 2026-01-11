@@ -10,8 +10,8 @@ model = load("../models/pipeline_rf.joblib")
 @app.post("/run_pipeline", )
 async def classify (item: Model_Request):
    input = pd.DataFrame([item.dict()])
-   output = model.predict(input)[0]
+   output = model.predict_proba(input)[0]
 
    return {
-      "investment_level": output
+      "investment_level": output.tolist()
    }
