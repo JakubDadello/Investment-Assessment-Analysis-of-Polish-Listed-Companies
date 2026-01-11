@@ -14,6 +14,9 @@ To run this project locally, you can use either Docker (recommended) or a standa
 * **Build the image:**
   ```bash
   docker build -t polish-equity-analytics .
+* **Run the container:**
+  ```bash
+  docker run -p 8000:8000 polish-equity-analytics
 
 ## Repository Structure
 - `data/` - raw and labeled datasets (see `data/README.md`)
