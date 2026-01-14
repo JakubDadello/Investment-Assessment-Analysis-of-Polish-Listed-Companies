@@ -1,20 +1,10 @@
-# Description of the project
-The analysis of a company's financial data, taking into account the characteristics of its sector, is among the key factors considered in investment-related decision-making processes. The analytical project presented in this document focuses on collecting selected, critical, and structured financial and non-financial data concerning Polish publicly listed companies. Subsequently, a comprehensive process of data exploration and visualization was carried out.
-
----
-
-# Purpose of the project
-The purpose of this project was to develop an efficient classification model capable of accurately categorizing the investment assessment of companies based on the mentioned determinants.
-
----
-
-# Project issues
-1. How can the investment evaluation of a publicly listed company be conducted based on selected financial indicators and information regarding its sector affiliation?
-2. What type of analytical model, based on machine learning algorithms, ensures sufficient effectiveness in Solving this Business problem?
-
----
 
 # Business Understanding
+
+The analysis of a company's financial data, taking into account the characteristics of its sector, is among the key factors considered in investment-related decision-making processes. The analytical project presented in this document focuses on collecting selected, critical, and structured financial and non-financial data concerning Polish publicly listed companies. Subsequently, a comprehensive process of data exploration and visualization was carried out.
+
+The purpose of this project was to develop an efficient classification model capable of accurately categorizing the investment assessment of companies based on the mentioned determinants.
+
 This project concerns fundamental analysis, understood within the framework of economic sciences and financial market theory as a set of methods used to evaluate the value of a company’s financial assets, particularly equity instruments.
 Fundamental analysis is based on the company’s so-called “fundamentals,” closely linked to the concept of “intrinsic value.” Serving cognitive, descriptive, explanatory, and predictive functions, it provides a valuable repertoire of analytical techniques and tools for entities investing capital in financial markets.
 
