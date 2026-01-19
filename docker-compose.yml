@@ -2,7 +2,7 @@ services:
   api_python_model:
     build: 
       context: .
-      dockefiler: Dockerfile
+      dockerfile: Dockerfile
     image: pqa_python_api:latest
     container_name: pqa_python_container
     ports: 
