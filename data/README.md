@@ -20,7 +20,7 @@ This folder contains all the datasets used in the project.
 ---
 
 ## 2. initial_labeling_data.csv
-- **Description:** Investment level labels for GPW companies
+- **Description:** Investment rating labels for GPW companies
 - **Labels:** low / medium / high
 - **Methodology:**
   - For each sector, median values of financial indicators (`roe`, `roa`, `net_income`, `ebitda`) were calculated
@@ -43,7 +43,7 @@ This folder contains all the datasets used in the project.
     - Missing values imputed using **most frequent value**
     - One-hot encoded using **OneHotEncoder** (ignoring unknown categories)
 - **Features:** Contains all input features after preprocessing (numerical scaled + categorical one-hot encoded)  
-- **Target:** Includes the investment level label (`low`, `medium`, `high`) from `initial_labeling_data.csv`  
+- **Target:** Includes the investment rating label (`low`, `medium`, `high`) from `initial_labeling_data.csv`  
 - **Usage:** Ready for modeling in Python or other ML frameworks
 
 ---
