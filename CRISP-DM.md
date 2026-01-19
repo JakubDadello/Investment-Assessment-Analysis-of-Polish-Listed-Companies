@@ -60,7 +60,7 @@ more information about dataset in `data/README.md`
 
 Data Preparation Steps Conducted in the Project:
 1. Exporting the Excel file containing the raw data.
-2. Separating the label column (investment level) from the rest of the data.
+2. Separating the label column (investment rating) from the rest of the data.
 3. Splitting the comprehensive dataset into numerical and categorical data.
 4. Creating a numerical transformer in the form of a sequential processing pipeline, used for preprocessing numerical data, including imputing missing values and normalizing random variables through standardization.
 5. Creating a categorical transformer, also in the form of a Pipeline, intended for preprocessing categorical data, including imputation and conversion of categorical variables into numerical format using OneHotEncoding.
