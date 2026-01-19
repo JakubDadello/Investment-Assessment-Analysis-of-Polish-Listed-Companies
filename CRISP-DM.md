@@ -19,8 +19,6 @@ Financial Analysis Areas:
 5. Profitability ratios analysis (e.g., ROE)
 6. Debt/leverage analysis (e.g., long-term debt ratio)
 
----
-
 # Data Understanding
 The Data Understanding process was carried out for each type of data. In this project, these included both financial and non-financial data.
 The tools used during the Data Understanding phase included the PostgreSQL database management system and the pgAdmin interface. In the next step, the preprocessed data, enriched with investment evaluation labels, were imported into an Excel file. Power BI was then used for their visualization.
